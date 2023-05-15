@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Hotel Gold Paradise</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment_one">Hello blank fragment One</string>
+    <string name="hello_blank_fragment_two">Hello blank fragment Two</string>
+    <string name="hello_blank_fragment_three">Hello blank fragment Three</string>
+    <string-array name="estado_opciones">
+        <item>Disponible</item>
+        <item>Ocupado</item>
+        <item>Mantenimiento</item>
+    </string-array>
+
+
+    <string name="menu">MENU PRINCIPAL</string>
+    <string name="menu_client">GESTIÓN DE CLIENTES</string>
+    <string name="menu_room">GESTIÓN DE HABITACIONES</string>
+    <string name="menu_energy">GESTIÓN DE CONSUMO</string>
+    <string name="menu_stats">ESTADÍSTICAS DEL HOTEL</string>
+    <string name="menu_help">MANUAL DE REGISTRO</string>
+</resources>

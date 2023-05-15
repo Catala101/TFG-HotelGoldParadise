@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:layout_margin="5dp"
+    android:background="#FFF">
+
+    <ImageView
+        android:id="@+id/habitacionImagen"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/indiceNumeroHabitacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Habitación:"
+        android:layout_toRightOf="@+id/habitacionImagen"
+        android:layout_marginLeft="5dp"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/numeroHabitacion"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/indiceNumeroHabitacion"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:textSize="17dp"
+        android:inputType="number"
+        android:enabled="false" />
+
+    <TextView
+        android:id="@+id/indiceTipoHabitacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tipo:"
+        android:layout_toRightOf="@+id/habitacionImagen"
+        android:layout_below="@+id/indiceNumeroHabitacion"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="12dp"
+        android:textSize="20dp" />
+
+    <Spinner
+        android:id="@+id/tipoHabitacionSpinner"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/indiceTipoHabitacion"
+        android:layout_below="@+id/indiceNumeroHabitacion"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:enabled="false" />
+
+    <TextView
+        android:id="@+id/indiceCapacidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Capacidad:"
+        android:layout_toRightOf="@+id/habitacionImagen"
+        android:layout_below="@+id/indiceTipoHabitacion"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="12dp"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/capacidad"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/indiceCapacidad"
+        android:layout_below="@+id/indiceTipoHabitacion"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:textSize="17dp"
+        android:inputType="number"
+        android:enabled="false" />
+
+    <TextView
+        android:id="@+id/indicePrecioHabitacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Precio:"
+        android:layout_toRightOf="@+id/habitacionImagen"
+        android:layout_below="@+id/indiceCapacidad"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="12dp"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/precioHabitacion"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/indicePrecioHabitacion"
+        android:layout_below="@+id/indiceCapacidad"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:textSize="17dp"
+        android:inputType="numberDecimal"
+        android:enabled="false" />
+
+    <TextView
+        android:id="@+id/indiceEstado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Estado:"
+        android:layout_toRightOf="@+id/habitacionImagen"
+        android:layout_below="@+id/indicePrecioHabitacion"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="12dp"
+        android:textSize="20dp" />
+
+    <Spinner
+        android:id="@+id/estadoSpinner"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/indiceEstado"
+        android:layout_below="@+id/indicePrecioHabitacion"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:enabled="false" />
+
+    <Button
+        android:id="@+id/btn_edit_habitacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Editar"
+        android:layout_below="@+id/precioHabitacion"
+        android:background="@drawable/esquinas_redondeadas1"
+        android:layout_marginTop="36dp" />
+
+    <Button
+        android:id="@+id/btn_delete_habitacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Eliminar"
+        android:background="@drawable/esquinas_redondeadas2"
+        android:layout_below="@+id/btn_edit_habitacion"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/btn_save_habitacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GUARDAR"
+        android:layout_below="@+id/btn_delete_habitacion"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/green_button"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"/>
+</RelativeLayout>
+

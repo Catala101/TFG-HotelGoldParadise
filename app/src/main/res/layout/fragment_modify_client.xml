@@ -1,0 +1,259 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_splash"
+    tools:context=".Fragments.ModifyClient">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/textoPrincipalModify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Modificar Cliente Existente"
+            android:textColor="#efb810"
+            android:textSize="60px"
+            android:layout_margin="15dp"
+            android:layout_centerHorizontal="true"/>
+        <TextView
+            android:id="@+id/textoDni"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DNI:"
+            android:textColor="#efb810"
+            android:layout_margin="15dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/textoPrincipalModify"/>
+        <EditText
+            android:id="@+id/editDnis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:layout_below="@id/textoDni"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="90dp"
+            android:layout_alignParentLeft="true"
+            android:maxLength="9"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 "
+            android:hint="Dni del cliente existente" />
+
+        <Button
+            android:id="@+id/botonBuscar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:layout_below="@id/textoDni"
+            android:text="BUSCAR" />
+        <TextView
+            android:id="@+id/textoDatosModify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Datos:"
+            android:textColor="#efb810"
+            android:layout_margin="15dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/editDnis"/>
+
+        <EditText
+            android:id="@+id/editNombreModify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="5"
+            android:inputType="textPersonName"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="72dp"
+            android:layout_below="@id/textoDatosModify"
+            android:maxLength="15"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+            android:hint="Nombre" />
+
+        <EditText
+            android:id="@+id/editDniModify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:layout_below="@id/editNombreModify"
+            android:layout_marginLeft="72dp"
+            android:maxLength="9"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 "
+            android:hint="DNI" />
+        <TextView
+            android:id="@+id/textoHabitaciónModify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Habitación:"
+            android:textColor="#efb810"
+            android:layout_margin="15dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/editDniModify"/>
+        <EditText
+            android:id="@+id/nomHabitacionModify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="5"
+            android:inputType="textPersonName"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="72dp"
+            android:layout_below="@id/textoHabitaciónModify"
+            android:maxLength="25"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789() -"
+            android:hint="Individual (1-9), Double (10-19), Triple (20-29), Quad(30-39)" />
+        <EditText
+            android:id="@+id/numHabitacionModify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:layout_below="@id/nomHabitacionModify"
+            android:layout_marginLeft="72dp"
+            android:layout_marginTop="10dp"
+            android:maxLength="3"
+            android:digits="0123456789"
+            android:hint="Número" />
+        <TextView
+            android:id="@+id/textoResidentesModify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Número de Residentes:"
+            android:layout_margin="15dp"
+            android:textColor="#efb810"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/numHabitacionModify"/>
+        <RelativeLayout
+            android:id="@+id/contNumResidentesModify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textoResidentesModify">
+
+            <Button
+                android:id="@+id/botonResidentesMasModify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:layout_toRightOf="@+id/cantidadResidentesModify"
+                android:textColor="#FF8000"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:text="+" />
+
+            <TextView
+                android:id="@+id/cantidadResidentesModify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:text="0"
+                android:textSize="30dp" />
+
+            <Button
+                android:id="@+id/botonResidentesMenosModify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:layout_toLeftOf="@+id/cantidadResidentesModify"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:textColor="#FF8000"
+                android:text="-" />
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/textoDiasModify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Número de Días:"
+            android:layout_margin="15dp"
+            android:textColor="#efb810"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/contNumResidentesModify"/>
+        <RelativeLayout
+            android:id="@+id/contNumDiasModify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textoDiasModify">
+
+            <Button
+                android:id="@+id/botonDiasMasModify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:layout_toRightOf="@+id/cantidadDiasModify"
+                android:textColor="#FF8000"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:text="+" />
+
+            <TextView
+                android:id="@+id/cantidadDiasModify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:text="0"
+                android:textSize="30dp" />
+
+            <Button
+                android:id="@+id/botonDiasMenosModify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:layout_toLeftOf="@+id/cantidadDiasModify"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:textColor="#FF8000"
+                android:text="-" />
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/textoTotalModify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total:"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:textColor="#efb810"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/contNumDiasModify"/>
+
+        <TextView
+            android:id="@+id/textoPrecioModify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:layout_marginLeft="15dp"
+            android:textSize="40dp"
+            android:layout_below="@id/textoTotalModify"
+            android:layout_centerHorizontal="true"/>
+        <TextView
+            android:id="@+id/textoEuroModify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="€"
+            android:textSize="40dp"
+            android:layout_below="@id/textoTotalModify"
+            android:layout_toRightOf="@id/textoPrecioModify"
+            android:layout_centerHorizontal="true"/>
+        <Button
+            android:id="@+id/botonModify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/esquinas_redondeadas2"
+            android:text="MODIFICAR"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="40dp"
+            android:textColor="#FFFFFF"
+            android:layout_below="@id/textoPrecioModify"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+
+</ScrollView>

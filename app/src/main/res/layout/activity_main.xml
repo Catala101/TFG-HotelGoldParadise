@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        >
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".MainActivity"
+            tools:ignore="DuplicateIds">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/contenedorPrincipal">
+                    <include
+                        android:id="@+id/toolbar"
+                        layout="@layout/toolbar" />
+                    <RelativeLayout
+                        android:id="@+id/encabezado"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/toolbar"
+                        android:layout_marginTop="10px"
+                        >
+                        <ImageView
+                            android:id="@+id/logoHotel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@mipmap/icono_goz"
+                            android:layout_toLeftOf="@+id/titulo"
+                            android:padding="10px"
+                            android:layout_marginRight="40px"
+                            android:layout_alignParentLeft="true"/>
+                        <TextView
+                            android:id="@+id/titulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Hotel gold paradise"
+                            android:textColor="#efb810"
+                            android:layout_marginTop="50px"
+                            android:layout_centerHorizontal="true"
+                            android:textSize="20sp"
+                            />
+                        <TextView
+                            android:id="@+id/subTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="(Administración y Gestión)"
+                            android:textColor="#efb810"
+                            android:layout_below="@+id/titulo"
+                            android:layout_marginTop="10px"
+                            android:layout_centerHorizontal="true"
+                            android:textSize="15sp"
+                            android:layout_marginBottom="20px"
+                            />
+
+                    </RelativeLayout>
+                    <ImageView
+                        android:id="@+id/imagenPrincipal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/imagenprincipal"
+                        android:layout_below="@id/encabezado"
+                        />
+                    <View
+                        android:id="@+id/lineaSeparadora1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/black"
+                        android:layout_below="@id/imagenPrincipal"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"/>
+
+                    <RelativeLayout
+                        android:id="@+id/operaciones"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/lineaSeparadora1">
+                        <TextView
+                            android:id="@+id/textoOperaciones"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Operaciones"
+                            android:textColor="#efb810"
+                            android:textSize="22sp"
+                            android:layout_marginTop="20px"
+                            android:layout_centerHorizontal="true"
+                            />
+
+                        <TextView
+                            android:id="@+id/listadoClientes"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/textoOperaciones"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/esquinas_redondeadas1"
+                            android:padding="20dp"
+                            android:text="Listado Clientes"
+                            android:textColor="#efb810"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id = "@+id/gestionClientes"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Gestión de Clientes"
+                            android:textSize="20sp"
+                            android:textColor="#efb810"
+                            android:padding="20dp"
+                            android:layout_below="@id/listadoClientes"
+                            android:background="@drawable/esquinas_redondeadas1"
+                            android:layout_margin="10dp"/>
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/lineaSeparadora2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/black"
+                        android:layout_below="@id/operaciones"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"/>
+
+                    <RelativeLayout
+                        android:id="@+id/instrucciones"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lineaSeparadora2"
+                        android:background="#9c9c9c"
+                        android:layout_margin="10px">
+                        <TextView
+                            android:id="@+id/textoInformacion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Instrucciones"
+                            android:textColor="#fff"
+                            android:textSize="17sp"
+                            android:layout_marginTop="10dp"
+                            android:layout_centerHorizontal="true"
+                            />
+
+                        <TextView
+                            android:id="@+id/Informacion1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textoInformacion"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:text="1. Para Modificar o Eliminar un Cliente se deberá introducir su DNI para buscar al Cliente. Solo puede haber un DNI por habitación."
+                            android:textColor="#fff"
+                            android:textSize="12sp" />
+                        <TextView
+                            android:id = "@+id/Informacion2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="2. Los tipos de habitaciónes estan numerados de forma secuencial del (1-39), y no pueden repetirse. "
+                            android:textSize="12sp"
+                            android:textColor="#fff"
+                            android:layout_margin="5dp"
+                            android:layout_below="@+id/Informacion1"
+                            />
+                        <TextView
+                            android:id = "@+id/Informacion3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="3. Número de Residentes maximo 4. Número de Dias máximo 31."
+                            android:textSize="12sp"
+                            android:textColor="#fff"
+                            android:layout_margin="5dp"
+                            android:layout_below="@+id/Informacion2"
+                            />
+
+                        <TextView
+                            android:id="@+id/Informacion4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/Informacion3"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:text="4. Si queremos modificar específicamente el campo de DNI tendremos que Eliminar al Cliente actual e Insertarlo de nuevo. "
+                            android:textColor="#fff"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </ScrollView>
+
+            <!-- Agrega el botón con la imagen -->
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/botonChat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="16dp"
+                android:src="@drawable/techbot"
+                android:background="@drawable/round_button"
+                app:elevation="6dp"
+                app:pressedTranslationZ="12dp" />
+
+            <LinearLayout
+                android:id="@+id/chatWindow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:background="@drawable/esquinas_redondeadas"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_margin="16dp">
+
+
+                <!-- Área de historial de chat -->
+                <ScrollView
+                    android:id="@+id/chat_history_scrollview"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+
+                    <TextView
+                        android:id="@+id/chat_history_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Historial de chat" />
+
+                </ScrollView>
+
+                <!-- Área de entrada de texto -->
+                <EditText
+                    android:id="@+id/chat_input_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Escribe tu mensaje aquí" />
+
+                <!-- Botón de envío de mensaje -->
+                <Button
+                    android:id="@+id/send_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enviar" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_main"
+        app:itemIconTint="@color/colorAccent"
+        app:menu="@menu/activity_main_drawer" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

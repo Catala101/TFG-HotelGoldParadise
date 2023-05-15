@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="opciones">
+        <item>Individual (1-9)</item>
+        <item>Doble (10-19)</item>
+        <item>Triple (20-29)</item>
+        <item>Quad (30-39)</item>
+
+    </string-array>
+
+</resources>

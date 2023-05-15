@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_splash"
+    tools:context=".Fragments.InsertNewClient">
+
+    <!-- TODO: Update blank fragment layout -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textoPrincipaInsert"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="Añadir Nuevo Cliente"
+                    android:textColor="#efb810"
+                    android:textSize="60px" />
+                <TextView
+                    android:id="@+id/textoDatos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Datos:"
+                    android:textColor="#efb810"
+                    android:layout_margin="15dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/textoPrincipaInsert"/>
+
+                <EditText
+                    android:id="@+id/editNombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="5"
+                    android:inputType="textPersonName"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="72dp"
+                    android:layout_below="@id/textoDatos"
+                    android:maxLength="15"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                    android:hint="Nombre" />
+
+                <EditText
+                    android:id="@+id/editDni"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:layout_below="@id/editNombre"
+                    android:layout_marginLeft="72dp"
+                    android:maxLength="9"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 "
+                    android:hint="DNI" />
+                <TextView
+                    android:id="@+id/textoHabitación"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Habitación:"
+                    android:textColor="#efb810"
+                    android:layout_margin="15dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/editDni"/>
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textoHabitación"
+                    android:layout_marginLeft="68dp"
+                    />
+                <EditText
+                    android:id="@+id/editNumHabitacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:layout_below="@id/spinner"
+                    android:layout_marginLeft="72dp"
+                    android:layout_marginTop="10dp"
+                    android:maxLength="3"
+                    android:digits="0123456789"
+                    android:hint="Número" />
+                <TextView
+                    android:id="@+id/textoResidentes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Número de Residentes:"
+                    android:layout_margin="15dp"
+                    android:textColor="#efb810"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/editNumHabitacion"/>
+                <RelativeLayout
+                    android:id="@+id/contNumResidentes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textoResidentes">
+
+                    <Button
+                        android:id="@+id/botonResidentesMas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
+                        android:layout_toRightOf="@+id/cantidadResidentes"
+                        android:textColor="#FF8000"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        android:text="+" />
+
+                    <TextView
+                        android:id="@+id/cantidadResidentes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        android:text="0"
+                        android:textSize="30dp" />
+
+                    <Button
+                        android:id="@+id/botonResidentesMenos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
+                        android:layout_toLeftOf="@+id/cantidadResidentes"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="#FF8000"
+                        android:text="-" />
+
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/textoDias"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Número de Días:"
+                    android:layout_margin="15dp"
+                    android:textColor="#efb810"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/contNumResidentes"/>
+                <RelativeLayout
+                    android:id="@+id/contNumDias"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textoDias">
+
+                    <Button
+                        android:id="@+id/botonDiasMas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
+                        android:layout_toRightOf="@+id/cantidadDias"
+                        android:textColor="#FF8000"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        android:text="+" />
+
+                    <TextView
+                        android:id="@+id/cantidadDias"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        android:text="0"
+                        android:textSize="30dp" />
+
+                    <Button
+                        android:id="@+id/botonDiasMenos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
+                        android:layout_toLeftOf="@+id/cantidadDias"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="#FF8000"
+                        android:text="-" />
+
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/textoTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total:"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:textColor="#efb810"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/contNumDias"/>
+
+                <TextView
+                    android:id="@+id/textoPrecio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="40dp"
+                    android:layout_below="@id/textoTotal"
+                    android:layout_centerHorizontal="true"/>
+                <TextView
+                    android:id="@+id/textoEuro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="€"
+                    android:textSize="40dp"
+                    android:layout_below="@id/textoTotal"
+                    android:layout_toRightOf="@id/textoPrecio"
+                    android:layout_centerHorizontal="true"/>
+                <Button
+                    android:id="@+id/botonCrear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/esquinas_redondeadas2"
+                    android:text="CREAR"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="40dp"
+                    android:textColor="#FFFFFF"
+                    android:layout_below="@id/textoPrecio"
+                    android:layout_centerHorizontal="true"/>
+
+            </RelativeLayout>
+
+
+
+</ScrollView>
